@@ -1,0 +1,213 @@
+body {
+    font-family: 'Open sans', sans-serif;
+    margin: 0;
+    background: rgb(63,94,251);
+    background: -webkit-linear-gradient(90deg, #85b2df,#3a8091,#1a4c46);
+    background: linear-gradient(90deg, #85b2df,#3a8091,#1a4c46);                                                                
+}
+
+*::after {
+    box-sizing: border-box;
+}
+
+.header {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgb(25, 25, 26);
+}
+
+.nav {
+    width: 1200px;
+    margin: 0 auto;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container {
+    padding: 20px 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container_main {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 30px;    
+}
+
+.wrapper {
+    background-color:  rgb(25, 25, 26);
+    border-radius: 10px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column ;
+}
+
+.block, .title {
+    padding: 5px 0px;
+    color: azure;
+    text-align: justify;
+    margin: 0px 20px;
+}
+
+.title {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    align-self: center;
+}
+
+.btn_wrap {
+    display:flex;
+    justify-content: flex-end;
+    padding: 20px 0px;
+    padding-right: 20px;
+}
+
+.btn, .btn_wrap {
+    margin: 0px 10px;
+}
+
+#del_btn, .rem_all {
+    background-color:  rgb(167, 1, 1);
+    color: beige;
+    transition: box-shadow 0.2s linear;
+}
+
+#del_btn:hover, .rem_all:hover {
+    outline: none;
+    box-shadow: 0 0 0 4px rgb(167, 1, 1);
+}
+
+#chn_btn {
+    background: -webkit-linear-gradient(90deg, #85b2df,#3a8091,#1a4c46);
+    background: linear-gradient(90deg, #85b2df,#3a8091,#1a4c46); 
+    color: rgb(201, 223, 224);
+}
+
+#del_btn, #btn_wrap, .rem_all {
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 0px;
+}
+
+#my_notes {
+    margin-left: 42px;
+}
+
+#add_note {
+    margin-right: 5px;
+    transition: text-shadow 0.2s linear;
+    animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+   
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #0fa,
+        0 0 80px #0fa,
+        0 0 90px #0fa,
+        0 0 100px #0fa,
+        0 0 150px #0fa;
+   
+    }
+   
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+}
+
+#my_notes, #add_note {
+    color: azure;
+}
+
+#my_notes::after {
+    margin-top: 4px;
+    content:"";
+    display: block;
+    width: 8%;
+    height: 2px;
+    opacity: 0;
+    position: absolute;
+    background-color: azure;
+    transition: opacity 0.2s linear;
+}
+
+
+
+#my_notes:hover::after {
+    opacity: 1;
+}
+
+.rem_all {
+    margin-left: 5px;
+}
+
+.upper, .rem_all {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn, .rem_all {
+    -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+    cursor: pointer;
+    border: none;
+    padding: 4px 8px;
+    font-size: 13px;
+    border-radius: 5px;
+    font-family: inherit;
+    font-weight:600;
+}
+
+.new_note, .all_notes {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.disabled {
+    display: none;
+}
+
+#add_btn, #save_btn {
+    align-self: flex-end;
+    margin: 10px 3px;
+    background-color: green;
+    color: rgb(201, 223, 224);
+    scale: 110%;
+}
+#add_btn:hover, #save_btn:hover {
+    outline: none;
+    box-shadow:  0 0 0 4px green;
+}
+
+#chn_btn:hover {
+    animation: flicker 1.5s infinite alternate; 
+}
+
+#message {
+    background-color: rgb(25, 25, 26);
+    border: none;
+    margin-top: 10px;
+    padding: 10px 10px;
+    color: rgb(201, 223, 224);
+    font-family: 'Open sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.new {
+    margin-left: 10px;
+}
