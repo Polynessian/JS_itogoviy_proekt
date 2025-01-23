@@ -22,7 +22,6 @@ body {
 .nav {
     width: 1200px;
     margin: 0 auto;
-    
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -140,8 +139,6 @@ body {
     background-color: azure;
     transition: opacity 0.2s linear;
 }
-
-
 
 #my_notes:hover::after {
     opacity: 1;
